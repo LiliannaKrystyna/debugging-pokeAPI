@@ -11,13 +11,13 @@ let requestString = `https://pokeapi.co/api/v2/pokemon/${pokeName}/${randomNumbe
 
 const changePokemon = async () => {
     let randomNumber = Math.ceil(Math.random() * 150 + 1);
-    console.log(randomNumber);
+
 
     let data = fetch(requestString);
-    console.log(data);
+
 
     let response = await data.json(string);
-    console.log(response);
+
 
     image.src = response.sprites.front_default;
     pokeNumber.textContent = `#${response.id}`;
@@ -26,5 +26,5 @@ const changePokemon = async () => {
 
 changePokemon();
 element.attachEvent("onclick", function() {
-    console.log("click");
+
 });
